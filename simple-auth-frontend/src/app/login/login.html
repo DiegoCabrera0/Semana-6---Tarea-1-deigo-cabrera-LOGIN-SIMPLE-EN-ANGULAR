@@ -1,0 +1,17 @@
+<div class="login-container">
+
+  <div class="login-card">
+    <h2>Iniciar Sesión</h2>
+
+    <input [(ngModel)]="username" placeholder="Usuario">
+
+    <input [(ngModel)]="password" type="password" placeholder="Contraseña">
+
+    <button (click)="login()" [disabled]="loading">
+      {{ loading ? 'Ingresando...' : 'Ingresar' }}
+    </button>
+
+    <p class="error">{{error}}</p>
+  </div>
+
+</div>
